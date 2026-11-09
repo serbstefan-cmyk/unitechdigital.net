@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>UNITECH DIGITAL | Refuerzo de equipos IT y software a medida</title>
 <meta name="description" content="UNITECH DIGITAL: desarrolladores, ingenieros DevOps y QA bajo contrato, y desarrollo de software a medida. Equipos nearshore en la UE, en Rumanía y Polonia. Rápido, cercano y rentable.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <script>document.documentElement.classList.add('js');</script>
 <link rel="canonical" href="https://unitechdigital.net/es/">
 <link rel="alternate" hreflang="en" href="https://unitechdigital.net/">
@@ -401,22 +403,6 @@
   </div>
 </footer>
 
-<script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-  const header = document.getElementById('top');
-  const onScroll = () => header.classList.toggle('fixed', window.scrollY > 520);
-  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
-  const io = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 }) : null;
-  document.querySelectorAll('.reveal').forEach((el, i) => {
-    el.style.transitionDelay = (i % 3) * 0.08 + 's';
-    io ? io.observe(el) : el.classList.add('in');
-  });
-  document.addEventListener('click', (e) => {
-    const open = document.querySelector('.lang[open]');
-    if (open && !open.contains(e.target)) open.removeAttribute('open');
-  });
-</script>
+<script src="../assets/site.js" defer></script>
 </body>
 </html>

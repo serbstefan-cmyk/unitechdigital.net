@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{meta_title}}</title>
 <meta name="description" content="{{meta_description}}">
-<script>document.documentElement.classList.add('js');</script>
+<meta http-equiv="Content-Security-Policy" content="{{csp}}">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<script>{{head_script}}</script>
 <link rel="canonical" href="{{canonical}}">
 {{hreflang_html}}
 <meta property="og:title" content="{{meta_title}}">
@@ -252,22 +254,6 @@
   </div>
 </footer>
 
-<script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-  const header = document.getElementById('top');
-  const onScroll = () => header.classList.toggle('fixed', window.scrollY > 520);
-  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
-  const io = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 }) : null;
-  document.querySelectorAll('.reveal').forEach((el, i) => {
-    el.style.transitionDelay = (i % 3) * 0.08 + 's';
-    io ? io.observe(el) : el.classList.add('in');
-  });
-  document.addEventListener('click', (e) => {
-    const open = document.querySelector('.lang[open]');
-    if (open && !open.contains(e.target)) open.removeAttribute('open');
-  });
-</script>
+<script src="{{base}}assets/site.js" defer></script>
 </body>
 </html>

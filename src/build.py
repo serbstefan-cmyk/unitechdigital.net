@@ -6,6 +6,8 @@ Reads src/template.html and src/i18n/<lang>.json, writes index.html (English,
 the default) and <lang>/index.html for every other language, plus sitemap.xml.
 Edit texts in the JSON files and the layout in the template, then rebuild.
 """
+import base64
+import hashlib
 import html
 import json
 import sys
@@ -32,6 +34,16 @@ LANGS = [
     ("fi", "Suomi", "fi_FI"),
 ]
 HTML_KEYS = {"hero_h1", "footer_tagline"}  # values that contain markup on purpose
+
+# The only inline script: marks JS as available before first paint (scroll reveals).
+# The Content Security Policy allows it by its hash and nothing else inline.
+HEAD_SCRIPT = "document.documentElement.classList.add('js');"
+HEAD_SCRIPT_HASH = "sha256-" + base64.b64encode(hashlib.sha256(HEAD_SCRIPT.encode("utf-8")).digest()).decode()
+CSP = ("default-src 'self'; "
+       f"script-src 'self' '{HEAD_SCRIPT_HASH}'; "
+       "style-src 'self' 'unsafe-inline'; "
+       "img-src 'self' data:; font-src 'self'; connect-src 'self'; "
+       "object-src 'none'; base-uri 'self'; form-action 'none'")
 EU_LANG_CODES = ["bg", "hr", "cs", "da", "nl", "en", "et", "fi", "fr", "de", "el", "hu",
                  "ga", "it", "lv", "lt", "mt", "pl", "pt", "ro", "sk", "sl", "es", "sv"]
 
@@ -90,6 +102,8 @@ def build_page(template: str, t: dict, code: str) -> str:
 
     values = {
         "lang": code,
+        "csp": CSP,
+        "head_script": HEAD_SCRIPT,
         "base": base,
         "home": base or "./",
         "canonical": url_for(code),
