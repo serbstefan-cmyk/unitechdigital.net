@@ -17,11 +17,66 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 <link rel="apple-touch-icon" href="assets/apple-icon-180x180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/hero.jpg">
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="assets/hero-640.webp" imagesrcset="assets/hero-640.webp 640w, assets/hero-1100.webp 1100w" imagesizes="(max-width: 960px) 440px, 460px">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://unitechdigital.net/#org",
+      "name": "UNITECH DIGITAL",
+      "url": "https://unitechdigital.net/",
+      "logo": "https://unitechdigital.net/assets/logo.png",
+      "description": "IT staff augmentation (contract developers, DevOps and QA engineers) and custom software development, with EU nearshore teams in Romania and Poland.",
+      "email": "stefan.serb@unitechdigital.net",
+      "sameAs": ["https://www.linkedin.com/company/102183329/"],
+      "knowsLanguage": ["bg","hr","cs","da","nl","en","et","fi","fr","de","el","hu","ga","it","lv","lt","mt","pl","pt","ro","sk","sl","es","sv"],
+      "areaServed": "Europe",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "stefan.serb@unitechdigital.net",
+        "name": "Stefan Serb"
+      },
+      "subOrganization": [
+        {
+          "@type": "Organization",
+          "legalName": "UNITECH DIGITAL sp. z o.o.",
+          "taxID": "9532812157",
+          "address": { "@type": "PostalAddress", "streetAddress": "ul. Pawia 3 lok. 3", "postalCode": "85-309", "addressLocality": "Bydgoszcz", "addressCountry": "PL" }
+        },
+        {
+          "@type": "Organization",
+          "legalName": "UNITECH DIGITAL SOLUTIONS S.R.L.",
+          "vatID": "RO45750762",
+          "address": { "@type": "PostalAddress", "addressLocality": "Bucharest", "addressCountry": "RO" }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://unitechdigital.net/#site",
+      "url": "https://unitechdigital.net/",
+      "name": "UNITECH DIGITAL",
+      "publisher": { "@id": "https://unitechdigital.net/#org" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
 <style>
+  @font-face {
+    font-family: "Archivo"; font-style: normal; font-weight: 400 900; font-stretch: 62% 125%; font-display: swap;
+    src: url(assets/fonts/archivo-latin-ext.woff2) format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: "Archivo"; font-style: normal; font-weight: 400 900; font-stretch: 62% 125%; font-display: swap;
+    src: url(assets/fonts/archivo-latin.woff2) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
   :root {
     --navy: #202939;
     --navy-2: #182030;
@@ -161,6 +216,27 @@
   .chips { display: flex; flex-wrap: wrap; gap: 8px; }
   .chip { font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: var(--soft); color: var(--green-text); border: 1px solid #d5ece5; }
 
+  /* Technologies + languages */
+  .stack { background: var(--soft); }
+  .stack-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 28px; align-items: start; }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 34px; }
+  .panel h3 { font-stretch: 115%; font-weight: 850; font-size: 22px; margin: 0 0 6px; }
+  .panel > p { color: var(--muted); margin: 0 0 22px; font-size: 15px; }
+  .tech { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .tech span {
+    display: flex; align-items: center; gap: 9px; padding: 11px 12px; border-radius: 11px;
+    border: 1px solid var(--line); font-weight: 650; font-size: 14.5px; background: #fff;
+    transition: border-color .2s ease, transform .2s ease;
+  }
+  .tech span::before { content: ""; width: 8px; height: 8px; border-radius: 3px; background: var(--grad); flex: none; }
+  .tech span:hover { border-color: var(--green); transform: translateY(-2px); }
+  .panel.dark { background: var(--navy); border-color: var(--navy); color: #fff; position: relative; overflow: hidden; }
+  .panel.dark::after { content: ""; position: absolute; right: -120px; bottom: -140px; width: 320px; height: 320px; background: radial-gradient(circle, rgba(104,255,186,0.22), transparent 65%); }
+  .panel.dark > p { color: rgba(255,255,255,0.7); }
+  .langs-big { font-stretch: 125%; font-weight: 900; font-size: 64px; line-height: 1; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 4px 0 6px; }
+  .langs { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 7px; }
+  .langs span { font-size: 12.5px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.88); border: 1px solid rgba(255,255,255,0.12); }
+
   /* Why */
   .why { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
   .why::before {
@@ -244,7 +320,9 @@
     .hero-visual { max-width: 440px; margin: 0 auto; width: 100%; }
     .hero-visual .mark { width: 110px; left: -16px; }
     .float.f1 { right: -6px; }
-    .services, .offers, .why-grid { grid-template-columns: 1fr; }
+    .services, .offers, .why-grid, .stack-grid { grid-template-columns: 1fr; }
+    .tech { grid-template-columns: repeat(2, 1fr); }
+    .panel { padding: 26px 22px; }
     footer .cols { grid-template-columns: 1fr; }
     nav.links a:not(.btn) { display: none; }
     section.block { padding: 80px 0; }
@@ -266,6 +344,7 @@
     <a class="logo" href="#"><img src="assets/logo-white.png" alt="UNITECH DIGITAL" width="196" height="36"></a>
     <nav class="links">
       <a href="#services">Services</a>
+      <a href="#technologies">Technologies</a>
       <a href="#why">Why us</a>
       <a href="#start">Start free</a>
       <a href="#nearshore">Nearshore</a>
@@ -292,7 +371,7 @@
         </div>
       </div>
       <div class="hero-visual rise d3">
-        <div class="frame"><img src="assets/hero.jpg" alt="A developer writing code at a desk in a busy office" width="1000" height="1250"></div>
+        <div class="frame"><img src="assets/hero-640.webp" srcset="assets/hero-640.webp 640w, assets/hero-1100.webp 1100w" sizes="(max-width: 960px) 440px, 460px" alt="A developer writing code at a desk in a busy office" width="640" height="800" fetchpriority="high"></div>
         <img class="mark" src="assets/mark.png" alt="" width="913" height="541">
         <div class="float f1"><span class="dot">3</span><div><b>Pre-screened CVs</b>shortlist in 48 hours</div></div>
         <div class="float f2"><span class="dot">&#10003;</span><div><b>Joins your team</b>your tools, your process</div></div>
@@ -315,7 +394,7 @@
       </div>
       <div class="services">
         <article class="svc reveal">
-          <div class="ph"><img src="assets/team.jpg" alt="A team of developers working at their computers" loading="lazy" width="1400" height="900"><span class="num">01</span></div>
+          <div class="ph"><img src="assets/team-640.webp" srcset="assets/team-640.webp 640w, assets/team-1100.webp 1100w" sizes="(max-width: 960px) 100vw, 560px" alt="A team of developers working at their computers" loading="lazy" decoding="async" width="640" height="412"><span class="num">01</span></div>
           <div class="body">
             <h3>Staff augmentation</h3>
             <p>We find and place IT professionals in contract roles inside your team. They work with your tools and your processes, for as long as you need them.</p>
@@ -323,13 +402,47 @@
           </div>
         </article>
         <article class="svc reveal">
-          <div class="ph"><img src="assets/code.jpg" alt="Two developers working on code on large monitors" loading="lazy" width="1400" height="900"><span class="num">02</span></div>
+          <div class="ph"><img src="assets/code-640.webp" srcset="assets/code-640.webp 640w, assets/code-1100.webp 1100w" sizes="(max-width: 960px) 100vw, 560px" alt="Two developers working on code on large monitors" loading="lazy" decoding="async" width="640" height="412"><span class="num">02</span></div>
           <div class="body">
             <h3>Custom software development</h3>
             <p>Have a project but not the people to build it? We plan, build and deliver custom software as a project, with one point of contact from start to finish.</p>
             <div class="chips"><span class="chip">Web &amp; backend apps</span><span class="chip">Integrations</span><span class="chip">Internal tools</span><span class="chip">Maintenance</span></div>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block stack" id="technologies">
+    <div class="wrap">
+      <div class="head reveal">
+        <div class="kicker">Technologies &amp; languages</div>
+        <h2 class="display">The stack you use. The language you speak.</h2>
+        <p>Our people cover the full range of modern technologies. These are the ones clients ask for most.</p>
+      </div>
+      <div class="stack-grid">
+        <div class="panel reveal">
+          <h3>Top 20 technologies</h3>
+          <p>Backend, frontend, mobile, data, cloud and DevOps.</p>
+          <div class="tech">
+            <span>Java</span><span>C# / .NET</span><span>Python</span><span>JavaScript</span>
+            <span>TypeScript</span><span>Node.js</span><span>React</span><span>Angular</span>
+            <span>Vue.js</span><span>PHP</span><span>Go</span><span>Kotlin</span>
+            <span>Swift</span><span>Flutter</span><span>React Native</span><span>PostgreSQL</span>
+            <span>MongoDB</span><span>AWS</span><span>Azure</span><span>Docker &amp; Kubernetes</span>
+          </div>
+        </div>
+        <div class="panel dark reveal">
+          <h3>Every EU language</h3>
+          <div class="langs-big">24</div>
+          <p>Our team covers all 24 official languages of the European Union.</p>
+          <div class="langs">
+            <span>Bulgarian</span><span>Croatian</span><span>Czech</span><span>Danish</span><span>Dutch</span><span>English</span>
+            <span>Estonian</span><span>Finnish</span><span>French</span><span>German</span><span>Greek</span><span>Hungarian</span>
+            <span>Irish</span><span>Italian</span><span>Latvian</span><span>Lithuanian</span><span>Maltese</span><span>Polish</span>
+            <span>Portuguese</span><span>Romanian</span><span>Slovak</span><span>Slovenian</span><span>Spanish</span><span>Swedish</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -392,10 +505,10 @@
         <div class="tz">
           <div><b>CET</b><span>Poland: same time zone as most of Western Europe</span></div>
           <div><b>+1h</b><span>Romania: one hour ahead of CET</span></div>
-          <div><b>EU</b><span>EU companies, EU contracts and invoicing</span></div>
+          <div><b>EU</b><span>EU companies, EU contracts, all 24 EU languages</span></div>
         </div>
       </div>
-      <div class="ph reveal"><img src="assets/work.jpg" alt="A team of developers working on laptops around a table" loading="lazy" width="1400" height="900"></div>
+      <div class="ph reveal"><img src="assets/work-640.webp" srcset="assets/work-640.webp 640w, assets/work-1100.webp 1100w" sizes="(max-width: 960px) 100vw, 540px" alt="A team of developers working on laptops around a table" loading="lazy" decoding="async" width="640" height="412"></div>
     </div>
   </section>
 
@@ -424,20 +537,24 @@
         <div>IT staff augmentation and custom software development.<br>Teams in Romania and Poland.</div>
       </div>
       <div>
-        <h4>Company</h4>
-        UNITECH DIGITAL sp. z o.o.<br>
-        ul. Pawia 3 lok. 3<br>85-309 Bydgoszcz, Poland<br>
-        NIP 9532812157 &middot; REGON 542038968
+        <h4>Companies</h4>
+        <b style="color:#fff;font-weight:600">UNITECH DIGITAL sp. z o.o.</b><br>
+        ul. Pawia 3 lok. 3, 85-309 Bydgoszcz, Poland<br>
+        NIP 9532812157 &middot; REGON 542038968<br><br>
+        <b style="color:#fff;font-weight:600">UNITECH DIGITAL SOLUTIONS S.R.L.</b><br>
+        Bucharest, Romania<br>
+        CUI RO45750762
       </div>
       <div>
         <h4>Contact</h4>
         Stefan Serb<br>
         <a href="mailto:stefan.serb@unitechdigital.net">stefan.serb@unitechdigital.net</a><br>
-        <a href="https://calendly.com/stefan-serb-unitechdigital" target="_blank" rel="noopener">Book a call</a>
+        <a href="https://calendly.com/stefan-serb-unitechdigital" target="_blank" rel="noopener">Book a call</a><br>
+        <a href="https://www.linkedin.com/company/102183329/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
     <div class="legal">
-      <span>&copy; <span id="y">2026</span> UNITECH DIGITAL</span>
+      <span>&copy; <span id="y">2026</span> UNITECH DIGITAL &middot; <a href="privacy.html">Privacy Policy</a></span>
       <span>Photos: <a href="https://unsplash.com/@arifriyanto" target="_blank" rel="noopener">Arif Riyanto</a>, <a href="https://unsplash.com/@anniespratt" target="_blank" rel="noopener">Annie Spratt</a> and <a href="https://unsplash.com/@sigmund" target="_blank" rel="noopener">Sigmund</a> on <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span>
     </div>
   </div>
