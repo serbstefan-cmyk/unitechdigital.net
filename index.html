@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UNITECH DIGITAL | IT staff augmentation and custom software</title>
+<meta name="description" content="UNITECH DIGITAL: contract developers, DevOps and QA engineers, and custom software development. EU nearshore teams in Romania and Poland. Fast, personal, cost-effective.">
+<link rel="canonical" href="https://unitechdigital.net/">
+<meta property="og:title" content="UNITECH DIGITAL | IT staff augmentation and custom software">
+<meta property="og:description" content="Contract developers, DevOps and QA engineers, and custom software. EU nearshore teams in Romania and Poland.">
+<meta property="og:url" content="https://unitechdigital.net/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='16' text-anchor='middle' fill='white'%3EU%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --ink: #0f172a;
+    --muted: #475569;
+    --line: #e2e8f0;
+    --bg: #ffffff;
+    --soft: #f1f5f9;
+    --brand: #1d4ed8;
+    --brand-dark: #1e3a8a;
+    --accent: #0ea5e9;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    font-size: 17px;
+  }
+  a { color: var(--brand); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: 0.04em; color: var(--ink); text-decoration: none; }
+  .logo .mark {
+    width: 34px; height: 34px; border-radius: 8px;
+    background: linear-gradient(135deg, var(--brand), var(--accent));
+    color: #fff; display: grid; place-items: center; font-size: 18px;
+  }
+  nav.links { display: flex; gap: 22px; align-items: center; }
+  nav.links a { color: var(--muted); text-decoration: none; font-size: 15px; }
+  nav.links a:hover { color: var(--ink); }
+  .btn {
+    display: inline-block; padding: 12px 22px; border-radius: 10px;
+    background: var(--brand); color: #fff !important; text-decoration: none;
+    font-weight: 600; font-size: 16px; border: 2px solid var(--brand);
+    transition: background .15s, border-color .15s;
+  }
+  .btn:hover { background: var(--brand-dark); border-color: var(--brand-dark); }
+  .btn.ghost { background: transparent; color: var(--brand) !important; }
+  .btn.ghost:hover { background: var(--soft); }
+  .btn.small { padding: 8px 16px; font-size: 15px; }
+
+  .hero {
+    background:
+      radial-gradient(1000px 400px at 85% -10%, rgba(14,165,233,0.18), transparent 60%),
+      radial-gradient(800px 400px at -10% 10%, rgba(29,78,216,0.12), transparent 60%),
+      var(--bg);
+    padding: 88px 0 72px;
+  }
+  .eyebrow { color: var(--brand); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 13px; }
+  h1 { font-size: clamp(34px, 5vw, 54px); line-height: 1.1; margin: 12px 0 18px; letter-spacing: -0.02em; max-width: 820px; }
+  .lead { font-size: 20px; color: var(--muted); max-width: 680px; margin: 0 0 30px; }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .pills { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 34px; }
+  .pill { background: var(--soft); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 14px; color: var(--muted); }
+
+  section { padding: 72px 0; }
+  section.alt { background: var(--soft); }
+  h2 { font-size: clamp(26px, 3.4vw, 36px); line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); max-width: 680px; margin: 0 0 36px; }
+
+  .grid { display: grid; gap: 20px; }
+  .grid.two { grid-template-columns: repeat(2, 1fr); }
+  .grid.three { grid-template-columns: repeat(3, 1fr); }
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 28px;
+  }
+  .card h3 { margin: 6px 0 10px; font-size: 21px; }
+  .card p { margin: 0; color: var(--muted); }
+  .card ul { margin: 14px 0 0; padding-left: 20px; color: var(--muted); }
+  .icon {
+    width: 44px; height: 44px; border-radius: 10px; display: grid; place-items: center;
+    background: rgba(29,78,216,0.1); color: var(--brand); font-size: 22px; font-weight: 700;
+  }
+
+  .offer .card { display: flex; flex-direction: column; }
+  .offer .card .tag { font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .steps { counter-reset: step; }
+  .step { position: relative; padding-left: 58px; }
+  .step::before {
+    counter-increment: step; content: counter(step);
+    position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 50%;
+    background: var(--brand); color: #fff; display: grid; place-items: center; font-weight: 700;
+  }
+  .step h3 { margin: 6px 0 6px; font-size: 19px; }
+  .step p { margin: 0; color: var(--muted); }
+
+  .band {
+    background: linear-gradient(135deg, var(--brand-dark), var(--brand));
+    color: #fff; border-radius: 18px; padding: 48px; display: flex; gap: 24px;
+    align-items: center; justify-content: space-between; flex-wrap: wrap;
+  }
+  .band h2 { color: #fff; margin: 0 0 8px; }
+  .band p { margin: 0; color: rgba(255,255,255,0.85); max-width: 560px; }
+  .band .btn { background: #fff; color: var(--brand-dark) !important; border-color: #fff; }
+  .band .btn:hover { background: var(--soft); }
+
+  footer { border-top: 1px solid var(--line); padding: 40px 0; color: var(--muted); font-size: 15px; }
+  footer .wrap { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+  footer strong { color: var(--ink); }
+
+  @media (max-width: 860px) {
+    .grid.three { grid-template-columns: 1fr; }
+    .grid.two { grid-template-columns: 1fr; }
+    nav.links a:not(.btn) { display: none; }
+    .hero { padding: 64px 0 56px; }
+    section { padding: 56px 0; }
+    .band { padding: 32px 24px; }
+    footer .wrap { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#"><span class="mark">U</span>UNITECH DIGITAL</a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#start">Get started</a>
+      <a href="#contact">Contact</a>
+      <a class="btn small" href="https://calendly.com/stefan-serb-unitechdigital" target="_blank" rel="noopener">Book a call</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">IT outsourcing &middot; EU nearshore</div>
+      <h1>Developers when you need them. Software when you need it built.</h1>
+      <p class="lead">UNITECH DIGITAL places contract developers, DevOps and QA engineers inside your team, and builds custom software for you. Teams in Romania and Poland: fast to start, personal, and cost-effective.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://calendly.com/stefan-serb-unitechdigital" target="_blank" rel="noopener">Book a free 15-minute call</a>
+        <a class="btn ghost" href="#start">See how to start</a>
+      </div>
+      <div class="pills">
+        <span class="pill">Staff augmentation</span>
+        <span class="pill">Custom software development</span>
+        <span class="pill">Developers &middot; DevOps &middot; QA</span>
+        <span class="pill">Romania &amp; Poland</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="alt">
+    <div class="wrap">
+      <h2>What we do</h2>
+      <p class="sub">Two ways to add tech capacity without a long hiring process.</p>
+      <div class="grid two">
+        <div class="card">
+          <div class="icon">+</div>
+          <h3>Staff augmentation</h3>
+          <p>We find and place IT professionals in contract roles inside your team. They work with your tools and your processes, for as long as you need them.</p>
+          <ul>
+            <li>Software developers (backend, frontend, full stack)</li>
+            <li>DevOps engineers</li>
+            <li>QA engineers</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="icon">&lt;/&gt;</div>
+          <h3>Custom software development</h3>
+          <p>Have a project but not the people to build it? We plan, build and deliver custom software as a project, with one point of contact from start to finish.</p>
+          <ul>
+            <li>Web and backend applications</li>
+            <li>Integrations and internal tools</li>
+            <li>Ongoing maintenance and support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap">
+      <h2>Why companies work with us</h2>
+      <p class="sub">We are a small company on purpose. That is what makes us fast and reachable.</p>
+      <div class="grid three">
+        <div class="card">
+          <div class="icon">&#8250;&#8250;</div>
+          <h3>Fast</h3>
+          <p>Contractors and project teams start quickly, while your own hiring takes months.</p>
+        </div>
+        <div class="card">
+          <div class="icon">24</div>
+          <h3>Personal, 24/7</h3>
+          <p>We keep a small client list, so every client gets real attention and we are available around the clock.</p>
+        </div>
+        <div class="card">
+          <div class="icon">&euro;</div>
+          <h3>Lower cost, fewer headaches</h3>
+          <p>Low overhead means competitive rates and none of the layers you get with large outsourcing firms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="start" class="alt offer">
+    <div class="wrap">
+      <h2>Start with something free</h2>
+      <p class="sub">No contract, no commitment. Pick the first step that fits you.</p>
+      <div class="grid three">
+        <div class="card">
+          <span class="tag">Hiring developers?</span>
+          <h3>2-3 CVs in 48 hours</h3>
+          <p>Tell us the role. Within 48 hours you get a shortlist of 2-3 pre-screened candidates, free.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Have a project?</span>
+          <h3>Free project estimate</h3>
+          <p>Describe what you want built and get a free estimate of time, team and cost.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Just exploring?</span>
+          <h3>15-minute call</h3>
+          <p>A short, no-pressure call with Stefan Serb about what you need and whether we are a fit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="sub">Simple, and quick to get going.</p>
+      <div class="grid three steps">
+        <div class="step">
+          <h3>Talk to us</h3>
+          <p>A 15-minute call or an email. Tell us the role or the project.</p>
+        </div>
+        <div class="step">
+          <h3>Get a shortlist or estimate</h3>
+          <p>Pre-screened candidates within 48 hours, or a clear project estimate.</p>
+        </div>
+        <div class="step">
+          <h3>Start working</h3>
+          <p>Your contractor joins the team, or our team starts building. We stay in touch every step.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2>Need developers or a software project done?</h2>
+          <p>Book a free 15-minute call, or write to <a href="mailto:stefan.serb@unitechdigital.net" style="color:#fff">stefan.serb@unitechdigital.net</a>.</p>
+        </div>
+        <a class="btn" href="https://calendly.com/stefan-serb-unitechdigital" target="_blank" rel="noopener">Book a call</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <strong>UNITECH DIGITAL sp. z o.o.</strong><br>
+      ul. Pawia 3 lok. 3, 85-309 Bydgoszcz, Poland<br>
+      NIP 9532812157 &middot; REGON 542038968<br>
+      Teams in Romania and Poland.
+    </div>
+    <div>
+      <strong>Contact</strong><br>
+      Stefan Serb<br>
+      <a href="mailto:stefan.serb@unitechdigital.net">stefan.serb@unitechdigital.net</a><br>
+      <a href="https://calendly.com/stefan-serb-unitechdigital" target="_blank" rel="noopener">Book a call</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:24px;display:block">&copy; <span id="y">2026</span> UNITECH DIGITAL</div>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
