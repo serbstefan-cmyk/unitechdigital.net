@@ -5,279 +5,412 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>UNITECH DIGITAL | IT staff augmentation and custom software</title>
 <meta name="description" content="UNITECH DIGITAL: contract developers, DevOps and QA engineers, and custom software development. EU nearshore teams in Romania and Poland. Fast, personal, cost-effective.">
+<script>document.documentElement.classList.add('js');</script>
 <link rel="canonical" href="https://unitechdigital.net/">
 <meta property="og:title" content="UNITECH DIGITAL | IT staff augmentation and custom software">
 <meta property="og:description" content="Contract developers, DevOps and QA engineers, and custom software. EU nearshore teams in Romania and Poland.">
 <meta property="og:url" content="https://unitechdigital.net/">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://unitechdigital.net/assets/logo.png">
+<meta name="theme-color" content="#202939">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 <link rel="apple-touch-icon" href="assets/apple-icon-180x180.png">
-<meta name="theme-color" content="#202939">
-<meta property="og:image" content="https://unitechdigital.net/assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero.jpg">
 <style>
   :root {
-    --ink: #202939;          /* brand navy */
-    --muted: #4a5568;
-    --line: #e3e8ee;
-    --bg: #ffffff;
-    --soft: #f2f8f6;
-    --brand: #1BB28E;        /* brand green */
-    --brand-text: #0f7d63;   /* darker green, readable on white */
-    --accent: #68FFBA;       /* brand mint */
-    --grad: linear-gradient(135deg, #68FFBA, #1BB28E);
+    --navy: #202939;
+    --navy-2: #182030;
+    --navy-3: #2a3448;
+    --ink: #202939;
+    --muted: #5b6577;
+    --line: #e2e7ee;
+    --paper: #ffffff;
+    --soft: #f3f8f6;
+    --mint: #68FFBA;
+    --green: #1BB28E;
+    --green-text: #0f7d63;
+    --grad: linear-gradient(135deg, #68FFBA 0%, #1BB28E 100%);
+    --radius: 18px;
+    --wide: "Archivo", system-ui, sans-serif;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    margin: 0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: var(--ink);
-    background: var(--bg);
-    line-height: 1.6;
-    font-size: 17px;
+    margin: 0; font-family: var(--wide); font-stretch: 100%;
+    color: var(--ink); background: var(--paper); line-height: 1.6; font-size: 17px;
+    -webkit-font-smoothing: antialiased;
   }
-  a { color: var(--brand-text); }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--green-text); }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 22px; }
+  .display { font-stretch: 118%; font-weight: 850; letter-spacing: -0.015em; line-height: 1.04; }
+  .kicker {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-stretch: 112%; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--green-text);
+  }
+  .kicker::before { content: ""; width: 26px; height: 3px; border-radius: 2px; background: var(--grad); }
+  .on-dark .kicker { color: var(--mint); }
 
-  header.top {
-    position: sticky; top: 0; z-index: 10;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--line);
-  }
-  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
-  .logo { display: flex; align-items: center; }
-  .logo img { height: 38px; width: auto; display: block; }
-  nav.links { display: flex; gap: 22px; align-items: center; }
-  nav.links a { color: var(--muted); text-decoration: none; font-size: 15px; }
-  nav.links a:hover { color: var(--ink); }
+  /* Buttons */
   .btn {
-    display: inline-block; padding: 12px 22px; border-radius: 10px;
-    background: var(--grad); color: var(--ink) !important; text-decoration: none;
-    font-weight: 700; font-size: 16px; border: 2px solid transparent;
-    transition: filter .15s, background .15s;
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 24px; border-radius: 12px; text-decoration: none;
+    font-weight: 750; font-stretch: 108%; font-size: 16px;
+    background: var(--grad); color: var(--navy) !important;
+    box-shadow: 0 10px 30px -12px rgba(27,178,142,0.7);
+    transition: transform .2s ease, box-shadow .2s ease;
   }
-  .btn:hover { filter: brightness(0.94); }
-  .btn.ghost { background: transparent; color: var(--ink) !important; border-color: var(--ink); }
-  .btn.ghost:hover { background: var(--soft); filter: none; }
-  .btn.small { padding: 8px 16px; font-size: 15px; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 16px 34px -12px rgba(27,178,142,0.85); }
+  .btn .arr { transition: transform .2s ease; }
+  .btn:hover .arr { transform: translateX(4px); }
+  .btn.line { background: transparent; box-shadow: none; color: #fff !important; border: 1.5px solid rgba(255,255,255,0.35); }
+  .btn.line:hover { border-color: var(--mint); }
+  .btn.small { padding: 10px 18px; font-size: 15px; }
 
+  /* Header */
+  header.top { position: absolute; inset: 0 0 auto 0; z-index: 20; }
+  header.top.fixed {
+    position: fixed; background: rgba(32,41,57,0.92); backdrop-filter: blur(10px);
+    box-shadow: 0 6px 24px -12px rgba(0,0,0,0.5); animation: drop .35s ease;
+  }
+  @keyframes drop { from { transform: translateY(-100%); } to { transform: none; } }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+  .top .logo img { height: 36px; width: auto; }
+  nav.links { display: flex; align-items: center; gap: 28px; }
+  nav.links a:not(.btn) { color: rgba(255,255,255,0.78); text-decoration: none; font-size: 15px; font-weight: 500; }
+  nav.links a:not(.btn):hover { color: var(--mint); }
+
+  /* Hero */
   .hero {
-    background:
-      radial-gradient(1000px 400px at 85% -10%, rgba(104,255,186,0.28), transparent 60%),
-      radial-gradient(800px 400px at -10% 10%, rgba(27,178,142,0.14), transparent 60%),
-      var(--bg);
-    padding: 88px 0 72px;
+    position: relative; overflow: hidden; color: #fff; background: var(--navy);
+    padding: 150px 0 110px;
   }
-  .eyebrow { color: var(--brand-text); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 13px; }
-  h1 { font-size: clamp(34px, 5vw, 54px); line-height: 1.1; margin: 12px 0 18px; letter-spacing: -0.02em; max-width: 820px; }
-  .lead { font-size: 20px; color: var(--muted); max-width: 680px; margin: 0 0 30px; }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
-  .pills { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 34px; }
-  .pill { background: var(--soft); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 14px; color: var(--muted); }
-
-  section { padding: 72px 0; }
-  section.alt { background: var(--soft); }
-  h2 { font-size: clamp(26px, 3.4vw, 36px); line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.01em; }
-  .sub { color: var(--muted); max-width: 680px; margin: 0 0 36px; }
-
-  .grid { display: grid; gap: 20px; }
-  .grid.two { grid-template-columns: repeat(2, 1fr); }
-  .grid.three { grid-template-columns: repeat(3, 1fr); }
-  .card {
-    background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 28px;
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(104,255,186,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(104,255,186,0.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse at 70% 40%, #000 20%, transparent 75%);
   }
-  .card h3 { margin: 6px 0 10px; font-size: 21px; }
-  .card p { margin: 0; color: var(--muted); }
-  .card ul { margin: 14px 0 0; padding-left: 20px; color: var(--muted); }
-  .icon {
-    width: 44px; height: 44px; border-radius: 10px; display: grid; place-items: center;
-    background: rgba(27,178,142,0.13); color: var(--brand-text); font-size: 22px; font-weight: 700;
+  .hero::after {
+    content: ""; position: absolute; width: 760px; height: 760px; right: -220px; top: -260px;
+    background: radial-gradient(circle, rgba(104,255,186,0.22), transparent 62%); pointer-events: none;
+  }
+  .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; }
+  .hero h1 { font-size: clamp(38px, 5.4vw, 66px); margin: 18px 0 22px; }
+  .hero h1 .hl { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero .lead { font-size: 19px; color: rgba(255,255,255,0.74); max-width: 560px; margin: 0 0 34px; }
+  .hero .ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+  .facts { display: flex; gap: 34px; flex-wrap: wrap; margin-top: 48px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.12); }
+  .fact b { display: block; font-stretch: 120%; font-weight: 850; font-size: 30px; line-height: 1.1; color: var(--mint); }
+  .fact span { font-size: 14px; color: rgba(255,255,255,0.65); }
+
+  .hero-visual { position: relative; }
+  .hero-visual .frame {
+    position: relative; border-radius: 26px; overflow: hidden; aspect-ratio: 4 / 5;
+    box-shadow: 0 40px 80px -30px rgba(0,0,0,0.65);
+  }
+  .hero-visual .frame img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85); }
+  .hero-visual .frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(24,32,48,0.6)); }
+  .hero-visual .mark {
+    position: absolute; width: 150px; height: auto; left: -54px; bottom: 60px; opacity: 0.95;
+    filter: drop-shadow(0 18px 30px rgba(0,0,0,0.45));
+  }
+  .float {
+    position: absolute; background: #fff; color: var(--ink); border-radius: 14px; padding: 14px 18px;
+    box-shadow: 0 24px 50px -18px rgba(0,0,0,0.55); font-size: 14px; line-height: 1.35;
+    display: flex; gap: 12px; align-items: center;
+  }
+  .float .dot { width: 38px; height: 38px; border-radius: 10px; background: var(--grad); display: grid; place-items: center; font-weight: 850; color: var(--navy); flex: none; }
+  .float b { display: block; font-stretch: 110%; }
+  .float.f1 { top: 34px; right: -26px; animation: bob 6s ease-in-out infinite; }
+  .float.f2 { bottom: -22px; right: 34px; animation: bob 7s ease-in-out -2s infinite; }
+  @keyframes bob { 50% { transform: translateY(-8px); } }
+
+  /* Role strip */
+  .strip { background: var(--navy-2); color: rgba(255,255,255,0.8); overflow: hidden; border-top: 1px solid rgba(255,255,255,0.06); }
+  .strip .track { display: flex; gap: 46px; padding: 18px 0; width: max-content; animation: scroll 32s linear infinite; }
+  .strip span { font-stretch: 115%; font-weight: 700; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; display: inline-flex; align-items: center; gap: 46px; }
+  .strip span::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--mint); }
+  @keyframes scroll { to { transform: translateX(-50%); } }
+
+  /* Sections */
+  section.block { padding: 110px 0; }
+  .head { max-width: 680px; margin-bottom: 52px; }
+  .head h2 { font-size: clamp(30px, 3.8vw, 46px); margin: 14px 0 14px; }
+  .head p { color: var(--muted); font-size: 18px; margin: 0; }
+
+  /* Services */
+  .services { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .svc { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #fff; transition: transform .3s ease, box-shadow .3s ease; }
+  .svc:hover { transform: translateY(-4px); box-shadow: 0 30px 60px -30px rgba(32,41,57,0.35); }
+  .svc .ph { position: relative; aspect-ratio: 16 / 9; overflow: hidden; }
+  .svc .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+  .svc:hover .ph img { transform: scale(1.04); }
+  .svc .num { position: absolute; left: 20px; bottom: 16px; font-stretch: 125%; font-weight: 900; font-size: 54px; line-height: 1; color: #fff; text-shadow: 0 6px 24px rgba(0,0,0,0.4); }
+  .svc .body { padding: 30px 32px 34px; }
+  .svc h3 { font-stretch: 115%; font-weight: 800; font-size: 26px; margin: 0 0 10px; line-height: 1.15; }
+  .svc p { color: var(--muted); margin: 0 0 18px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: var(--soft); color: var(--green-text); border: 1px solid #d5ece5; }
+
+  /* Why */
+  .why { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
+  .why::before {
+    content: ""; position: absolute; width: 620px; height: 620px; left: -260px; bottom: -320px;
+    background: radial-gradient(circle, rgba(27,178,142,0.28), transparent 65%);
+  }
+  .why .head p { color: rgba(255,255,255,0.7); }
+  .why-grid { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.1); border-radius: var(--radius); overflow: hidden; }
+  .why-item { background: var(--navy); padding: 38px 34px 40px; transition: background .3s ease; }
+  .why-item:hover { background: var(--navy-3); }
+  .why-item .big { font-stretch: 125%; font-weight: 900; font-size: 44px; line-height: 1; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .why-item h3 { font-stretch: 112%; font-weight: 800; font-size: 22px; margin: 18px 0 10px; }
+  .why-item p { color: rgba(255,255,255,0.7); margin: 0; }
+
+  /* Offers */
+  .offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .offer { position: relative; border-radius: var(--radius); padding: 34px 30px; background: #fff; border: 1px solid var(--line); display: flex; flex-direction: column; transition: border-color .25s ease, transform .25s ease; }
+  .offer:hover { border-color: var(--green); transform: translateY(-3px); }
+  .offer.featured { background: var(--soft); border-color: #bfe8da; }
+  .offer .tag { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-text); }
+  .offer h3 { font-stretch: 115%; font-weight: 850; font-size: 25px; line-height: 1.15; margin: 12px 0 10px; }
+  .offer p { color: var(--muted); margin: 0 0 24px; flex: 1; }
+  .offer .go { font-weight: 700; text-decoration: none; color: var(--navy); display: inline-flex; gap: 8px; align-items: center; }
+  .offer .go::after { content: "\2192"; color: var(--green); transition: transform .2s ease; }
+  .offer:hover .go::after { transform: translateX(4px); }
+  .badge { position: absolute; top: -12px; right: 22px; background: var(--grad); color: var(--navy); font-size: 12px; font-weight: 800; padding: 5px 11px; border-radius: 999px; letter-spacing: 0.04em; }
+
+  /* Process + nearshore */
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .split .ph { border-radius: 24px; overflow: hidden; aspect-ratio: 14 / 9; position: relative; box-shadow: 0 30px 60px -30px rgba(32,41,57,0.45); }
+  .split .ph img { width: 100%; height: 100%; object-fit: cover; }
+  .steps { list-style: none; padding: 0; margin: 0; position: relative; }
+  .steps::before { content: ""; position: absolute; left: 21px; top: 10px; bottom: 10px; width: 2px; background: linear-gradient(var(--mint), var(--green)); opacity: 0.5; }
+  .steps li { position: relative; padding: 0 0 30px 66px; }
+  .steps li:last-child { padding-bottom: 0; }
+  .steps .n { position: absolute; left: 0; top: 0; width: 44px; height: 44px; border-radius: 12px; background: var(--grad); color: var(--navy); display: grid; place-items: center; font-weight: 900; font-stretch: 120%; }
+  .steps h3 { font-stretch: 112%; font-weight: 800; font-size: 20px; margin: 6px 0 4px; }
+  .steps p { color: var(--muted); margin: 0; }
+
+  .near { background: var(--soft); }
+  .tz { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 30px; }
+  .tz div { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  .tz b { display: block; font-stretch: 118%; font-weight: 850; font-size: 22px; }
+  .tz span { color: var(--muted); font-size: 14px; }
+
+  /* CTA */
+  .cta { padding: 0 0 110px; background: var(--soft); }
+  .cta-box {
+    position: relative; overflow: hidden; border-radius: 28px; background: var(--navy); color: #fff;
+    padding: 64px; display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 40px; align-items: center;
+  }
+  .cta-box::after { content: ""; position: absolute; right: -120px; top: -160px; width: 520px; height: 520px; background: radial-gradient(circle, rgba(104,255,186,0.25), transparent 62%); }
+  .cta-box h2 { font-size: clamp(30px, 3.6vw, 44px); margin: 14px 0 14px; }
+  .cta-box p { color: rgba(255,255,255,0.74); margin: 0; font-size: 18px; }
+  .cta-box p a { color: var(--mint); }
+  .cta-box .side { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+  .cta-box .side small { color: rgba(255,255,255,0.6); }
+
+  footer { background: var(--navy-2); color: rgba(255,255,255,0.65); padding: 56px 0 36px; font-size: 15px; }
+  footer .cols { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 36px; }
+  footer img { height: 32px; width: auto; margin-bottom: 16px; }
+  footer h4 { color: #fff; font-stretch: 112%; font-size: 15px; margin: 4px 0 12px; letter-spacing: 0.04em; }
+  footer a { color: rgba(255,255,255,0.85); text-decoration: none; }
+  footer a:hover { color: var(--mint); }
+  footer .legal { margin-top: 40px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; }
+
+  /* Motion */
+  .rise { opacity: 0; transform: translateY(22px); animation: rise .8s cubic-bezier(.2,.7,.2,1) forwards; }
+  .d1 { animation-delay: .08s; } .d2 { animation-delay: .18s; } .d3 { animation-delay: .3s; } .d4 { animation-delay: .44s; } .d5 { animation-delay: .6s; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  .js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .rise, .reveal { opacity: 1; transform: none; }
   }
 
-  .offer .card { display: flex; flex-direction: column; }
-  .offer .card .tag { font-size: 13px; font-weight: 700; color: var(--brand-text); text-transform: uppercase; letter-spacing: 0.06em; }
-
-  .steps { counter-reset: step; }
-  .step { position: relative; padding-left: 58px; }
-  .step::before {
-    counter-increment: step; content: counter(step);
-    position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 50%;
-    background: var(--grad); color: var(--ink); display: grid; place-items: center; font-weight: 800;
-  }
-  .step h3 { margin: 6px 0 6px; font-size: 19px; }
-  .step p { margin: 0; color: var(--muted); }
-
-  .band {
-    background:
-      radial-gradient(600px 300px at 100% 0%, rgba(104,255,186,0.18), transparent 60%),
-      var(--ink);
-    color: #fff; border-radius: 18px; padding: 48px; display: flex; gap: 24px;
-    align-items: center; justify-content: space-between; flex-wrap: wrap;
-  }
-  .band h2 { color: #fff; margin: 0 0 8px; }
-  .band p { margin: 0; color: rgba(255,255,255,0.85); max-width: 560px; }
-  .band .logo-white { height: 34px; width: auto; display: block; margin-bottom: 18px; }
-  .band a:not(.btn) { color: var(--accent) !important; }
-
-  footer { border-top: 1px solid var(--line); padding: 40px 0; color: var(--muted); font-size: 15px; }
-  footer .wrap { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
-  footer strong { color: var(--ink); }
-
-  @media (max-width: 860px) {
-    .grid.three { grid-template-columns: 1fr; }
-    .grid.two { grid-template-columns: 1fr; }
+  @media (max-width: 960px) {
+    .hero { padding: 120px 0 90px; }
+    .hero .wrap, .split, .cta-box { grid-template-columns: 1fr; }
+    .hero-visual { max-width: 440px; margin: 0 auto; width: 100%; }
+    .hero-visual .mark { width: 110px; left: -16px; }
+    .float.f1 { right: -6px; }
+    .services, .offers, .why-grid { grid-template-columns: 1fr; }
+    footer .cols { grid-template-columns: 1fr; }
     nav.links a:not(.btn) { display: none; }
-    .hero { padding: 64px 0 56px; }
-    section { padding: 56px 0; }
-    .band { padding: 32px 24px; }
-    footer .wrap { grid-template-columns: 1fr; }
+    section.block { padding: 80px 0; }
+    .cta-box { padding: 40px 26px; }
+    .split .ph { order: -1; }
+  }
+  @media (max-width: 480px) {
+    .facts { gap: 22px; }
+    .fact b { font-size: 24px; }
+    .tz { grid-template-columns: 1fr; }
+    .top .logo img { height: 30px; }
   }
 </style>
 </head>
 <body>
 
-<header class="top">
+<header class="top" id="top">
   <div class="wrap">
-    <a class="logo" href="#"><img src="assets/logo.png" alt="UNITECH DIGITAL" width="207" height="38"></a>
+    <a class="logo" href="#"><img src="assets/logo-white.png" alt="UNITECH DIGITAL" width="196" height="36"></a>
     <nav class="links">
       <a href="#services">Services</a>
       <a href="#why">Why us</a>
-      <a href="#start">Get started</a>
-      <a href="#contact">Contact</a>
+      <a href="#start">Start free</a>
+      <a href="#nearshore">Nearshore</a>
       <a class="btn small" href="https://calendly.com/stefan-serb-unitechdigital" target="_blank" rel="noopener">Book a call</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero on-dark">
     <div class="wrap">
-      <div class="eyebrow">IT outsourcing &middot; EU nearshore</div>
-      <h1>Developers when you need them. Software when you need it built.</h1>
-      <p class="lead">UNITECH DIGITAL places contract developers, DevOps and QA engineers inside your team, and builds custom software for you. Teams in Romania and Poland: fast to start, personal, and cost-effective.</p>
-      <div class="cta-row">
-        <a class="btn" href="https://calendly.com/stefan-serb-unitechdigital" target="_blank" rel="noopener">Book a free 15-minute call</a>
-        <a class="btn ghost" href="#start">See how to start</a>
-      </div>
-      <div class="pills">
-        <span class="pill">Staff augmentation</span>
-        <span class="pill">Custom software development</span>
-        <span class="pill">Developers &middot; DevOps &middot; QA</span>
-        <span class="pill">Romania &amp; Poland</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="services" class="alt">
-    <div class="wrap">
-      <h2>What we do</h2>
-      <p class="sub">Two ways to add tech capacity without a long hiring process.</p>
-      <div class="grid two">
-        <div class="card">
-          <div class="icon">+</div>
-          <h3>Staff augmentation</h3>
-          <p>We find and place IT professionals in contract roles inside your team. They work with your tools and your processes, for as long as you need them.</p>
-          <ul>
-            <li>Software developers (backend, frontend, full stack)</li>
-            <li>DevOps engineers</li>
-            <li>QA engineers</li>
-          </ul>
+      <div>
+        <div class="kicker rise d1">IT outsourcing &middot; EU nearshore</div>
+        <h1 class="display rise d2">Developers when you need them. <span class="hl">Software when you need it built.</span></h1>
+        <p class="lead rise d3">UNITECH DIGITAL places contract developers, DevOps and QA engineers inside your team, and builds custom software for you. Teams in Romania and Poland: fast to start, personal, and cost-effective.</p>
+        <div class="ctas rise d4">
+          <a class="btn" href="https://calendly.com/stefan-serb-unitechdigital" target="_blank" rel="noopener">Book a free 15-minute call <span class="arr">&rarr;</span></a>
+          <a class="btn line" href="#start">Get 2-3 CVs in 48h</a>
         </div>
-        <div class="card">
-          <div class="icon">&lt;/&gt;</div>
-          <h3>Custom software development</h3>
-          <p>Have a project but not the people to build it? We plan, build and deliver custom software as a project, with one point of contact from start to finish.</p>
-          <ul>
-            <li>Web and backend applications</li>
-            <li>Integrations and internal tools</li>
-            <li>Ongoing maintenance and support</li>
-          </ul>
+        <div class="facts rise d5">
+          <div class="fact"><b>48h</b><span>to a vetted shortlist</span></div>
+          <div class="fact"><b>24/7</b><span>reachable, every client</span></div>
+          <div class="fact"><b>RO + PL</b><span>EU teams, EU contracts</span></div>
         </div>
+      </div>
+      <div class="hero-visual rise d3">
+        <div class="frame"><img src="assets/hero.jpg" alt="A developer writing code at a desk in a busy office" width="1000" height="1250"></div>
+        <img class="mark" src="assets/mark.png" alt="" width="913" height="541">
+        <div class="float f1"><span class="dot">3</span><div><b>Pre-screened CVs</b>shortlist in 48 hours</div></div>
+        <div class="float f2"><span class="dot">&#10003;</span><div><b>Joins your team</b>your tools, your process</div></div>
       </div>
     </div>
   </section>
 
-  <section id="why">
+  <div class="strip" aria-hidden="true">
+    <div class="track">
+      <span>Backend developers</span><span>Frontend developers</span><span>Full stack</span><span>DevOps engineers</span><span>QA engineers</span><span>Custom software</span>
+      <span>Backend developers</span><span>Frontend developers</span><span>Full stack</span><span>DevOps engineers</span><span>QA engineers</span><span>Custom software</span>
+    </div>
+  </div>
+
+  <section class="block" id="services">
     <div class="wrap">
-      <h2>Why companies work with us</h2>
-      <p class="sub">We are a small company on purpose. That is what makes us fast and reachable.</p>
-      <div class="grid three">
-        <div class="card">
-          <div class="icon">&#8250;&#8250;</div>
-          <h3>Fast</h3>
-          <p>Contractors and project teams start quickly, while your own hiring takes months.</p>
-        </div>
-        <div class="card">
-          <div class="icon">24</div>
-          <h3>Personal, 24/7</h3>
-          <p>We keep a small client list, so every client gets real attention and we are available around the clock.</p>
-        </div>
-        <div class="card">
-          <div class="icon">&euro;</div>
-          <h3>Lower cost, fewer headaches</h3>
-          <p>Low overhead means competitive rates and none of the layers you get with large outsourcing firms.</p>
-        </div>
+      <div class="head reveal">
+        <div class="kicker">What we do</div>
+        <h2 class="display">Two ways to add tech capacity, without a long hiring process.</h2>
+      </div>
+      <div class="services">
+        <article class="svc reveal">
+          <div class="ph"><img src="assets/team.jpg" alt="A team of developers working at their computers" loading="lazy" width="1400" height="900"><span class="num">01</span></div>
+          <div class="body">
+            <h3>Staff augmentation</h3>
+            <p>We find and place IT professionals in contract roles inside your team. They work with your tools and your processes, for as long as you need them.</p>
+            <div class="chips"><span class="chip">Backend</span><span class="chip">Frontend</span><span class="chip">Full stack</span><span class="chip">DevOps</span><span class="chip">QA</span></div>
+          </div>
+        </article>
+        <article class="svc reveal">
+          <div class="ph"><img src="assets/code.jpg" alt="Two developers working on code on large monitors" loading="lazy" width="1400" height="900"><span class="num">02</span></div>
+          <div class="body">
+            <h3>Custom software development</h3>
+            <p>Have a project but not the people to build it? We plan, build and deliver custom software as a project, with one point of contact from start to finish.</p>
+            <div class="chips"><span class="chip">Web &amp; backend apps</span><span class="chip">Integrations</span><span class="chip">Internal tools</span><span class="chip">Maintenance</span></div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="start" class="alt offer">
+  <section class="block why on-dark" id="why">
     <div class="wrap">
-      <h2>Start with something free</h2>
-      <p class="sub">No contract, no commitment. Pick the first step that fits you.</p>
-      <div class="grid three">
-        <div class="card">
+      <div class="head reveal">
+        <div class="kicker">Why UNITECH</div>
+        <h2 class="display">Small on purpose. That is what makes us fast and reachable.</h2>
+        <p>Large outsourcing firms add layers. We keep a short client list, so you always talk to people who know your project.</p>
+      </div>
+      <div class="why-grid reveal">
+        <div class="why-item"><div class="big">Fast</div><h3>Start in days, not months</h3><p>Contractors and project teams start quickly, while in-house hiring can take a quarter.</p></div>
+        <div class="why-item"><div class="big">24/7</div><h3>Personal attention</h3><p>Every client gets real focus, and we are reachable around the clock when something matters.</p></div>
+        <div class="why-item"><div class="big">&minus;&euro;</div><h3>Lower cost, fewer headaches</h3><p>Low overhead means competitive rates, without the account-manager layers of big agencies.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="start">
+    <div class="wrap">
+      <div class="head reveal">
+        <div class="kicker">Start free</div>
+        <h2 class="display">Pick a first step. No contract, no commitment.</h2>
+      </div>
+      <div class="offers">
+        <div class="offer featured reveal">
+          <span class="badge">Most popular</span>
           <span class="tag">Hiring developers?</span>
-          <h3>2-3 CVs in 48 hours</h3>
+          <h3>2-3 vetted CVs in 48 hours</h3>
           <p>Tell us the role. Within 48 hours you get a shortlist of 2-3 pre-screened candidates, free.</p>
+          <a class="go" href="mailto:stefan.serb@unitechdigital.net?subject=CV%20shortlist%20request">Request a shortlist</a>
         </div>
-        <div class="card">
+        <div class="offer reveal">
           <span class="tag">Have a project?</span>
           <h3>Free project estimate</h3>
           <p>Describe what you want built and get a free estimate of time, team and cost.</p>
+          <a class="go" href="mailto:stefan.serb@unitechdigital.net?subject=Project%20estimate%20request">Ask for an estimate</a>
         </div>
-        <div class="card">
+        <div class="offer reveal">
           <span class="tag">Just exploring?</span>
           <h3>15-minute call</h3>
           <p>A short, no-pressure call with Stefan Serb about what you need and whether we are a fit.</p>
+          <a class="go" href="https://calendly.com/stefan-serb-unitechdigital" target="_blank" rel="noopener">Book a time</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="wrap">
-      <h2>How it works</h2>
-      <p class="sub">Simple, and quick to get going.</p>
-      <div class="grid three steps">
-        <div class="step">
-          <h3>Talk to us</h3>
-          <p>A 15-minute call or an email. Tell us the role or the project.</p>
-        </div>
-        <div class="step">
-          <h3>Get a shortlist or estimate</h3>
-          <p>Pre-screened candidates within 48 hours, or a clear project estimate.</p>
-        </div>
-        <div class="step">
-          <h3>Start working</h3>
-          <p>Your contractor joins the team, or our team starts building. We stay in touch every step.</p>
+  <section class="block near" id="nearshore">
+    <div class="wrap split">
+      <div class="reveal">
+        <div class="kicker">How it works</div>
+        <h2 class="display" style="font-size:clamp(30px,3.6vw,44px);margin:14px 0 30px">From first call to first commit.</h2>
+        <ol class="steps">
+          <li><span class="n">1</span><h3>Talk to us</h3><p>A 15-minute call or an email. Tell us the role or the project.</p></li>
+          <li><span class="n">2</span><h3>Get a shortlist or estimate</h3><p>Pre-screened candidates within 48 hours, or a clear project estimate.</p></li>
+          <li><span class="n">3</span><h3>Start working</h3><p>Your contractor joins the team, or our team starts building. We stay in touch every step.</p></li>
+        </ol>
+        <div class="tz">
+          <div><b>CET</b><span>Poland: same time zone as most of Western Europe</span></div>
+          <div><b>+1h</b><span>Romania: one hour ahead of CET</span></div>
+          <div><b>EU</b><span>EU companies, EU contracts and invoicing</span></div>
         </div>
       </div>
+      <div class="ph reveal"><img src="assets/work.jpg" alt="A team of developers working on laptops around a table" loading="lazy" width="1400" height="900"></div>
     </div>
   </section>
 
-  <section id="contact">
+  <section class="cta" id="contact">
     <div class="wrap">
-      <div class="band">
-        <div>
-          <img class="logo-white" src="assets/logo-white.png" alt="UNITECH DIGITAL" width="185" height="34">
-          <h2>Need developers or a software project done?</h2>
+      <div class="cta-box reveal on-dark">
+        <div style="position:relative;z-index:1">
+          <div class="kicker">Let's talk</div>
+          <h2 class="display">Need developers or a software project done?</h2>
           <p>Book a free 15-minute call, or write to <a href="mailto:stefan.serb@unitechdigital.net">stefan.serb@unitechdigital.net</a>.</p>
         </div>
-        <a class="btn" href="https://calendly.com/stefan-serb-unitechdigital" target="_blank" rel="noopener">Book a call</a>
+        <div class="side">
+          <a class="btn" href="https://calendly.com/stefan-serb-unitechdigital" target="_blank" rel="noopener">Book a call <span class="arr">&rarr;</span></a>
+          <small>15 minutes with Stefan Serb. No pressure.</small>
+        </div>
       </div>
     </div>
   </section>
@@ -285,21 +418,43 @@
 
 <footer>
   <div class="wrap">
-    <div>
-      <img src="assets/logo.png" alt="UNITECH DIGITAL" width="163" height="30" style="height:30px;width:auto;display:block;margin-bottom:12px"><strong>UNITECH DIGITAL sp. z o.o.</strong><br>
-      ul. Pawia 3 lok. 3, 85-309 Bydgoszcz, Poland<br>
-      NIP 9532812157 &middot; REGON 542038968<br>
-      Teams in Romania and Poland.
+    <div class="cols">
+      <div>
+        <img src="assets/logo-white.png" alt="UNITECH DIGITAL" width="174" height="32">
+        <div>IT staff augmentation and custom software development.<br>Teams in Romania and Poland.</div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        UNITECH DIGITAL sp. z o.o.<br>
+        ul. Pawia 3 lok. 3<br>85-309 Bydgoszcz, Poland<br>
+        NIP 9532812157 &middot; REGON 542038968
+      </div>
+      <div>
+        <h4>Contact</h4>
+        Stefan Serb<br>
+        <a href="mailto:stefan.serb@unitechdigital.net">stefan.serb@unitechdigital.net</a><br>
+        <a href="https://calendly.com/stefan-serb-unitechdigital" target="_blank" rel="noopener">Book a call</a>
+      </div>
     </div>
-    <div>
-      <strong>Contact</strong><br>
-      Stefan Serb<br>
-      <a href="mailto:stefan.serb@unitechdigital.net">stefan.serb@unitechdigital.net</a><br>
-      <a href="https://calendly.com/stefan-serb-unitechdigital" target="_blank" rel="noopener">Book a call</a>
+    <div class="legal">
+      <span>&copy; <span id="y">2026</span> UNITECH DIGITAL</span>
+      <span>Photos: <a href="https://unsplash.com/@arifriyanto" target="_blank" rel="noopener">Arif Riyanto</a>, <a href="https://unsplash.com/@anniespratt" target="_blank" rel="noopener">Annie Spratt</a> and <a href="https://unsplash.com/@sigmund" target="_blank" rel="noopener">Sigmund</a> on <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span>
     </div>
   </div>
-  <div class="wrap" style="margin-top:24px;display:block">&copy; <span id="y">2026</span> UNITECH DIGITAL</div>
 </footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const header = document.getElementById('top');
+  const onScroll = () => header.classList.toggle('fixed', window.scrollY > 520);
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 }) : null;
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = (i % 3) * 0.08 + 's';
+    io ? io.observe(el) : el.classList.add('in');
+  });
+</script>
 </body>
 </html>
