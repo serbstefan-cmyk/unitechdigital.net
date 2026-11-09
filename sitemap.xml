@@ -1,13 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://unitechdigital.net/</loc>
     <lastmod>2026-11-09</lastmod>
-    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitechdigital.net/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://unitechdigital.net/fr/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://unitechdigital.net/nl/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unitechdigital.net/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://unitechdigital.net/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unitechdigital.net/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unitechdigital.net/pt/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://unitechdigital.net/pl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://unitechdigital.net/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://unitechdigital.net/da/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://unitechdigital.net/fi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unitechdigital.net/"/>
+  </url>
+  <url>
+    <loc>https://unitechdigital.net/fr/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitechdigital.net/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://unitechdigital.net/fr/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://unitechdigital.net/nl/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unitechdigital.net/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://unitechdigital.net/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unitechdigital.net/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unitechdigital.net/pt/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://unitechdigital.net/pl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://unitechdigital.net/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://unitechdigital.net/da/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://unitechdigital.net/fi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unitechdigital.net/"/>
+  </url>
+  <url>
+    <loc>https://unitechdigital.net/nl/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitechdigital.net/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://unitechdigital.net/fr/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://unitechdigital.net/nl/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unitechdigital.net/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://unitechdigital.net/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unitechdigital.net/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unitechdigital.net/pt/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://unitechdigital.net/pl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://unitechdigital.net/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://unitechdigital.net/da/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://unitechdigital.net/fi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unitechdigital.net/"/>
+  </url>
+  <url>
+    <loc>https://unitechdigital.net/de/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitechdigital.net/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://unitechdigital.net/fr/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://unitechdigital.net/nl/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unitechdigital.net/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://unitechdigital.net/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unitechdigital.net/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unitechdigital.net/pt/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://unitechdigital.net/pl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://unitechdigital.net/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://unitechdigital.net/da/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://unitechdigital.net/fi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unitechdigital.net/"/>
+  </url>
+  <url>
+    <loc>https://unitechdigital.net/it/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitechdigital.net/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://unitechdigital.net/fr/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://unitechdigital.net/nl/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unitechdigital.net/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://unitechdigital.net/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unitechdigital.net/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unitechdigital.net/pt/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://unitechdigital.net/pl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://unitechdigital.net/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://unitechdigital.net/da/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://unitechdigital.net/fi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unitechdigital.net/"/>
+  </url>
+  <url>
+    <loc>https://unitechdigital.net/es/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitechdigital.net/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://unitechdigital.net/fr/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://unitechdigital.net/nl/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unitechdigital.net/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://unitechdigital.net/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unitechdigital.net/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unitechdigital.net/pt/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://unitechdigital.net/pl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://unitechdigital.net/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://unitechdigital.net/da/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://unitechdigital.net/fi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unitechdigital.net/"/>
+  </url>
+  <url>
+    <loc>https://unitechdigital.net/pt/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitechdigital.net/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://unitechdigital.net/fr/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://unitechdigital.net/nl/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unitechdigital.net/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://unitechdigital.net/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unitechdigital.net/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unitechdigital.net/pt/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://unitechdigital.net/pl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://unitechdigital.net/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://unitechdigital.net/da/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://unitechdigital.net/fi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unitechdigital.net/"/>
+  </url>
+  <url>
+    <loc>https://unitechdigital.net/pl/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitechdigital.net/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://unitechdigital.net/fr/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://unitechdigital.net/nl/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unitechdigital.net/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://unitechdigital.net/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unitechdigital.net/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unitechdigital.net/pt/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://unitechdigital.net/pl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://unitechdigital.net/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://unitechdigital.net/da/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://unitechdigital.net/fi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unitechdigital.net/"/>
+  </url>
+  <url>
+    <loc>https://unitechdigital.net/sv/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitechdigital.net/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://unitechdigital.net/fr/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://unitechdigital.net/nl/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unitechdigital.net/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://unitechdigital.net/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unitechdigital.net/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unitechdigital.net/pt/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://unitechdigital.net/pl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://unitechdigital.net/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://unitechdigital.net/da/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://unitechdigital.net/fi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unitechdigital.net/"/>
+  </url>
+  <url>
+    <loc>https://unitechdigital.net/da/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitechdigital.net/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://unitechdigital.net/fr/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://unitechdigital.net/nl/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unitechdigital.net/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://unitechdigital.net/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unitechdigital.net/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unitechdigital.net/pt/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://unitechdigital.net/pl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://unitechdigital.net/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://unitechdigital.net/da/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://unitechdigital.net/fi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unitechdigital.net/"/>
+  </url>
+  <url>
+    <loc>https://unitechdigital.net/fi/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitechdigital.net/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://unitechdigital.net/fr/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://unitechdigital.net/nl/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://unitechdigital.net/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://unitechdigital.net/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://unitechdigital.net/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://unitechdigital.net/pt/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://unitechdigital.net/pl/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://unitechdigital.net/sv/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://unitechdigital.net/da/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://unitechdigital.net/fi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://unitechdigital.net/"/>
   </url>
   <url>
     <loc>https://unitechdigital.net/privacy.html</loc>
     <lastmod>2026-11-09</lastmod>
-    <priority>0.3</priority>
   </url>
 </urlset>

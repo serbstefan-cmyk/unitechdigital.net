@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /src/
 
 Sitemap: https://unitechdigital.net/sitemap.xml
